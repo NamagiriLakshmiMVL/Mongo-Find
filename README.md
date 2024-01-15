@@ -214,6 +214,8 @@ For the following question write the corresponding MongoDB queries
 1.Find all the information about each products
 Answer: db.products.find().pretty()
 
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/22ac7be0-c021-4acb-aa60-aa854a958904)
+
 
 
 
