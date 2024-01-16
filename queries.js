@@ -1,183 +1,6 @@
-[
-    {
-        "id": "1",
-        "product_name": "Intelligent Fresh Chips",
-        "product_price": 655.00,
-        "product_material": "Concrete",
-        "product_color": "mint green"
-    },
-    {
-        "id": "2",
-        "product_name": "Practical Fresh Sausages",
-        "product_price": 911.0,
-        "product_material": "Cotton",
-        "product_color": "indigo"
-    },
-    {
-        "id": "3",
-        "product_name": "Refined Steel Car",
-        "product_price": 690.00,
-        "product_material": "Rubber",
-        "product_color": "gold"
-    },
-    {
-        "id": "4",
-        "product_name": "Gorgeous Plastic Pants",
-        "product_price": 492.00,
-        "product_material": "Soft",
-        "product_color": "plum"
-    },
-    {
-        "id": "5",
-        "product_name": "Sleek Cotton Chair",
-        "product_price": 33.00,
-        "product_material": "Fresh",
-        "product_color": "black"
-    },
-    {
-        "id": "6",
-        "product_name": "Awesome Wooden Towels",
-        "product_price": 474.00,
-        "product_material": "Plastic",
-        "product_color": "orange"
-    },
-    {
-        "id": "7",
-        "product_name": "Practical Soft Shoes",
-        "product_price": 500.00,
-        "product_material": "Rubber",
-        "product_color": "pink"
-    },
-    {
-        "id": "8",
-        "product_name": "Incredible Steel Hat",
-        "product_price": 78.00,
-        "product_material": "Rubber",
-        "product_color": "violet"
-    },
-    {
-        "id": "9",
-        "product_name": "Awesome Wooden Ball",
-        "product_price": 28.00,
-        "product_material": "Soft",
-        "product_color": "azure"
-    },
-    {
-        "id": "10",
-        "product_name": "Generic Wooden Pizza",
-        "product_price": 84.00,
-        "product_material": "Frozen",
-        "product_color": "indigo"
-    },
-    {
-        "id": "11",
-        "product_name": "Unbranded Wooden Cheese",
-        "product_price":26.00,
-        "product_material": "Soft",
-        "product_color": "black"
-    },
-    {
-        "id": "12",
-        "product_name": "Unbranded Plastic Salad",
-        "product_price": 89.00,
-        "product_material": "Wooden",
-        "product_color": "pink"
-    },
-    {
-        "id": "13",
-        "product_name": "Gorgeous Cotton Keyboard",
-        "product_price": 37.00,
-        "product_material": "Concrete",
-        "product_color": "sky blue"
-    },
-    {
-        "id": "14",
-        "product_name": "Incredible Steel Shirt",
-        "product_price": 54.00,
-        "product_material": "Metal",
-        "product_color": "white"
-    },
-    {
-        "id": "15",
-        "product_name": "Ergonomic Cotton Hat",
-        "product_price": 43.00,
-        "product_material": "Rubber",
-        "product_color": "mint green"
-    },
-    {
-        "id": "16",
-        "product_name": "Small Soft Chair",
-        "product_price": 47.00,
-        "product_material": "Cotton",
-        "product_color": "teal"
-    },
-    {
-        "id": "17",
-        "product_name": "Incredible Metal Car",
-        "product_price":36.00,
-        "product_material": "Fresh",
-        "product_color": "indigo"
-    },
-    {
-        "id": "18",
-        "product_name": "Licensed Plastic Bacon",
-        "product_price":88.00,
-        "product_material": "Steel",
-        "product_color": "yellow"
-    },
-    {
-        "id": "19",
-        "product_name": "Intelligent Cotton Chips",
-        "product_price": 46.00,
-        "product_material": "Soft",
-        "product_color": "azure"
-    },
-    {
-        "id": "20",
-        "product_name": "Handcrafted Wooden Bacon",
-        "product_price": 36.00,
-        "product_material": "Concrete",
-        "product_color": "lime"
-    },
-    {
-        "id": "21",
-        "product_name": "Unbranded Granite Chicken",
-        "product_price": 90.00,
-        "product_material": "Metal",
-        "product_color": "gold"
-    },
-    {
-        "id": "22",
-        "product_name": "Ergonomic Soft Hat",
-        "product_price": 99.00,
-        "product_material": "Rubber",
-        "product_color": "black"
-    },
-    {
-        "id": "23",
-        "product_name": "Intelligent Steel Pizza",
-        "product_price": 95.00,
-        "product_material": "Cotton",
-        "product_color": "azure"
-    },
-    {
-        "id": "24",
-        "product_name": "Tasty Rubber Cheese",
-        "product_price":47.00,
-        "product_material": "Frozen",
-        "product_color": "orchid"
-    },
-    {
-        "id": "25",
-        "product_name": "Licensed Steel Car",
-        "product_price":20.00,
-        "product_material": "Cotton",
-        "product_color": "indigo"
-    }
-]
+INSERTING DATA INTO TABLE-PRODUCTS
 
-
-1. db.products.insertMany([
+db.products.insertMany([
          {
              "id": "1",
              "product_name": "Intelligent Fresh Chips",
@@ -385,21 +208,65 @@
             ]
     }
 
-1. db.products.find().pretty()
 
-2. db.products.find({product_price :{$gt:400,$lt:800}}).pretty()
+For the following question write the corresponding MongoDB queries
 
-3. db.products.find({product_price :{$not:{$gt:400,$lt:800}}}).pretty()
+1.Find all the information about each products
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/aa2a3659-b8f5-422b-80ea-dca0084eb3a3)
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/9d909479-5b54-4e54-ba4c-a132c596bcfa)
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/10d055ee-5008-4ca9-9092-8f093f2a8d41)
+Answer: db.products.find().pretty()
 
-4. db.products.find({product_price : {$gte:500}}).limit(4).pretty()
 
-5. db.products.find({},{_id:0,product_name:1,product_price:1}).pretty()
+2.Find the product price which are between 400 to 800
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/c05ecfd0-b15f-4223-931c-8f6d65a2c002)
+Answer: db.products.find({product_price :{$gt:400,$lt:800}}).pretty()
 
-6. db.products.find({id:"10"})
+3.Find the product price which are not between 400 to 600
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/88676f71-a2dd-4311-8c32-56afe6900a94)
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/1c0b4559-67a1-4855-896e-9cbb8cc6601e)
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/e688f82f-7cb5-4ead-a32f-5a0ea04d9aa3)
+Answer: db.products.find({product_price :{$not:{$gt:400,$lt:800}}}).pretty()
 
-7. db.products.find({},{_id:0,product_name:1,product_material:1}).pretty()
+4.List the four product which are grater than 500 in price 
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/657e57a6-409f-44db-92a6-10887306fbfb)
+Answer: db.products.find({product_price : {$gte:500}}).limit(4).pretty()
 
-8. db.products.find({product_material:"Soft"}).pretty()
 
-9. db.products.findOne({},{product_price:"492",product_color:"indigo"})
+5.Find the product name and product material of each products
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/3455fd4d-19c4-4557-91a3-090e26732d12)
+Answer:  db.products.find({},{_id:0,product_name:1,product_price:1}).pretty()
+
+
+6.Find the product with a row id of 10
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/ef815f83-1235-4231-b137-6dd1be2e6e55)
+Answer: db.products.findOne({id:"10"})
+
+
+7.Find only the product name and product material
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/e941a7ac-b114-483b-8db6-aa72e1fcc327)
+Answer: db.products.find({},{_id:0,product_name:1,product_material:1}).pretty()
+
+
+8.Find all products which contain the value of soft in product material 
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/d66d8f45-564d-409b-b2ba-a67b1aec7981)
+Answer:  db.products.find({product_material:"Soft"}).pretty()
+
+
+9.Find products which contain product color indigo  and product price 492.00
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/6cada699-e775-4e72-9762-40f81f86d3bd)
+              Answer: db.products.findOne({},{product_price:"492",product_color:"indigo"})
+
+
+10.Delete the products which product price value are same
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/b0681a53-cc38-4a51-8d0d-c704fb0decdb)
+Answer: db.product.aggregate([{ $group : { _id: "$product_price",count : {$sum : 1},"dups" :{"$push" : "$id"}}},{$match : {count : {$gt : 1}} }])
+        db.product.remove({id : {$in : ["24","20"]}})
+
+
+
+
+
+
+
 
