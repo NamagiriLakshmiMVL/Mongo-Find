@@ -212,56 +212,56 @@ db.products.insertMany([
 For the following question write the corresponding MongoDB queries
 
 1.Find all the information about each products
-Answer: db.products.find().pretty()
-
 ![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/aa2a3659-b8f5-422b-80ea-dca0084eb3a3)
 ![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/9d909479-5b54-4e54-ba4c-a132c596bcfa)
 ![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/10d055ee-5008-4ca9-9092-8f093f2a8d41)
+Answer: db.products.find().pretty()
+
 
 2.Find the product price which are between 400 to 800
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/c05ecfd0-b15f-4223-931c-8f6d65a2c002)
 Answer: db.products.find({product_price :{$gt:400,$lt:800}}).pretty()
 
-![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/c05ecfd0-b15f-4223-931c-8f6d65a2c002)
-
 3.Find the product price which are not between 400 to 600
-Answer: db.products.find({product_price :{$not:{$gt:400,$lt:800}}}).pretty()
-
 ![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/88676f71-a2dd-4311-8c32-56afe6900a94)
 ![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/1c0b4559-67a1-4855-896e-9cbb8cc6601e)
 ![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/e688f82f-7cb5-4ead-a32f-5a0ea04d9aa3)
+Answer: db.products.find({product_price :{$not:{$gt:400,$lt:800}}}).pretty()
 
 4.List the four product which are grater than 500 in price 
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/657e57a6-409f-44db-92a6-10887306fbfb)
 Answer: db.products.find({product_price : {$gte:500}}).limit(4).pretty()
 
-![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/657e57a6-409f-44db-92a6-10887306fbfb)
 
 5.Find the product name and product material of each products
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/3455fd4d-19c4-4557-91a3-090e26732d12)
 Answer:  db.products.find({},{_id:0,product_name:1,product_price:1}).pretty()
 
-![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/3455fd4d-19c4-4557-91a3-090e26732d12)
 
 6.Find the product with a row id of 10
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/ef815f83-1235-4231-b137-6dd1be2e6e55)
 Answer: db.products.findOne({id:"10"})
 
-![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/ef815f83-1235-4231-b137-6dd1be2e6e55)
 
 7.Find only the product name and product material
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/e941a7ac-b114-483b-8db6-aa72e1fcc327)
 Answer: db.products.find({},{_id:0,product_name:1,product_material:1}).pretty()
 
-![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/e941a7ac-b114-483b-8db6-aa72e1fcc327)
 
 8.Find all products which contain the value of soft in product material 
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/d66d8f45-564d-409b-b2ba-a67b1aec7981)
 Answer:  db.products.find({product_material:"Soft"}).pretty()
 
-![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/d66d8f45-564d-409b-b2ba-a67b1aec7981)
 
 9.Find products which contain product color indigo  and product price 492.00
-Answer: db.products.findOne({},{product_price:"492",product_color:"indigo"})
-
 ![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/6cada699-e775-4e72-9762-40f81f86d3bd)
+              Answer: db.products.findOne({},{product_price:"492",product_color:"indigo"})
+
 
 10.Delete the products which product price value are same
-Answer: 
+![image](https://github.com/NamagiriLakshmiMVL/Mongo-Find/assets/144921147/b0681a53-cc38-4a51-8d0d-c704fb0decdb)
+Answer: db.product.aggregate([{ $group : { _id: "$product_price",count : {$sum : 1},"dups" :{"$push" : "$id"}}},{$match : {count : {$gt : 1}} }])
+        db.product.remove({id : {$in : ["24","20"]}})
 
 
 
